@@ -20,7 +20,7 @@ async function generateGame(tags){
         //loop through selectedCats and push object with url, gameTag, gameId to catImages array
         for (let j = 0; j < selectedCats.length; j++) {
             catImages.push({
-                url: `https://cataas.com/cat/${selectedCats[j].id}`,
+                url: `https://cataas.com/cat/${selectedCats[j].id}?width=200&height=200`,
                 gameTag: tag,
                 gameId: `${tag}-${j}`
             });
@@ -103,3 +103,4 @@ function checkMatch(selectedCards) {
            selectedCards[1].gameTag === selectedCards[2].gameTag &&
            selectedCards[2].gameTag === selectedCards[3].gameTag;
 }
+
