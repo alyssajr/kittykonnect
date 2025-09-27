@@ -84,7 +84,7 @@ h1 {
 
 .sprite{
     .sprite {
-    background-image: url(spritesheet.png);
+    background-image: url(IDLE.png);
     background-repeat: no-repeat;
     display: block;
 }
