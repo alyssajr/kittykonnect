@@ -44,6 +44,8 @@ h1 {
 .square.selected {
     outline: 7px solid #A3D2CA;
     outline-offset: -4px; 
+    width: 100px;
+    height: 100px;
     border-radius: 15px;
 }
 
@@ -78,4 +80,18 @@ h1 {
 .button:hover {
   background-color: #ff9980;
   color: #ffffff;
+}
+
+.sprite{
+    .sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-IDLE {
+    width: 640px;
+    height: 64px;
+    background-position: -5px -5px;
+}
 }
