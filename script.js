@@ -54,7 +54,7 @@ function randomTag(){
     "loaf", "orange", "sad", "sit", "sleep", "tabby", "tongue", "tuxedo", 
     "white", "sofa", "food", "happy", "outside", "serious", "shocked", 
     "christmas", "halloween", "yawn", "Bengal", "tortoiseshell", "blanket", 
-    "scared", "siamese", "smug", "standing", "stretch", "ugly", "GreenEyes", 
+    "scared", "siamese", "smug", "standing", "stretch", "ugly", 
     "basket", "bath", "cow", "crazy", "selfie", "stuck"
     ];
  
@@ -93,7 +93,7 @@ async function createGrid(){
             } else if (selectedCount < maxSelection) {
                 square.classList.add("selected");
                 selectedCount++;
-            }else if(square.classList.contains("matched")){
+            }else if(square.classList.contains("match")){
                 return;
             }
 
@@ -114,7 +114,7 @@ const message = document.getElementById("message");
 //  Handle submit
 submitBtn.addEventListener("click", () => {
     const selectedSquares = Array.from(document.querySelectorAll(".square.selected"));
-
+    
     // Check if selected squares have the same tag
     let isMatch = true;
     const firstTag = selectedSquares[0].querySelector("img").dataset.tag;
@@ -128,9 +128,14 @@ submitBtn.addEventListener("click", () => {
     if(isMatch){
         for(let i = 0; i < selectedSquares.length; i++){
             const square = selectedSquares[i];
-            square.innerHTML = `<div class="tag">${firstTag}</div>`;
+            
+            const overlay = document.createElement("div");
+            overlay.classList.add("tag");
+            overlay.textContent = firstTag;
+            square.appendChild(overlay);
+
+            square.classList.add("match");
             square.classList.remove("selected");
-            selectedSquares[i].classList.add("match");
         }
         message.textContent = "Correct!";
     }else{
