@@ -113,8 +113,17 @@ h1 {
 }
 
 .catWalk-WALK {
-    width: 960px;
+    width: 64px;
     height: 64px;
-    background-position: -5px -5px;
+    background-image: url(spritesheet_walk.png);
+    background-repeat: no-repeat;
+    
+    animation: walkCycle 1s steps(12) infinite;
+}
+
+@keyframes walkCycle {
+    from { background-position: 0px 0px; }
+    to { background-position: -773px 0px; }
+    
 }
 
