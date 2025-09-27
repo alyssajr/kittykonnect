@@ -73,7 +73,8 @@ async function createGrid(){
 
     const tags = randomTag();
     const catImages = await generateGame(tags);
-
+    hintBtn.disabled = false;
+    
     for(let i = 0; i < catImages.length; i++){
         const square = document.createElement("div");
         square.classList.add("square");
@@ -108,6 +109,32 @@ function checkMatch(selectedCards) {
            selectedCards[1].gameTag === selectedCards[2].gameTag &&
            selectedCards[2].gameTag === selectedCards[3].gameTag;
 }
+
+//gives the user a hint by revealing one of the tags
+const hintBtn = document.getElementById("hintBtn");
+const hintMessage = document.getElementById("hintMessage");
+
+let usedHints = [];
+hintBtn.addEventListener("click", () => {
+    //find all unmatched squares
+    const unmatchedSquares = Array.from(document.querySelectorAll(".square:not(.match) img"));
+    //filter out tags that have already been used as hints
+    const remainingHints = unmatchedSquares.filter(square => !usedHints.includes(square.dataset.tag));
+    
+    //if no remaining hints, disable button
+    if (remainingHints.length === 0) {
+        hintBtn.disabled = true;
+        return;
+    }
+
+    //pick random unmatched square
+    const randomSquare = remainingHints[Math.floor(Math.random() * remainingHints.length)];
+    
+    //add tag to usedHints and display
+    usedHints.push(randomSquare.dataset.tag);
+    hintMessage.textContent = `Hints: ${usedHints.join(", ")}`;
+
+});
 
 const message = document.getElementById("message");
 
