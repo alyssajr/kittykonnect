@@ -50,6 +50,7 @@ h1 {
 }
 
 .button {
+    margin-top: 20px;
     padding: 10px;
     background-color: #FFB380;
     border-radius: 5px;
