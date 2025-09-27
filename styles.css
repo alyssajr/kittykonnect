@@ -118,12 +118,12 @@ h1 {
     background-image: url(spritesheet_walk.png);
     background-repeat: no-repeat;
     
-    animation: walkCycle 1s steps(12) infinite;
+    animation: walkCycle 1s steps(15) infinite;
 }
 
 @keyframes walkCycle {
     from { background-position: 0px 0px; }
-    to { background-position: -773px 0px; }
+    to { background-position: -960px 0px; }
     
 }
 
