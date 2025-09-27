@@ -23,6 +23,13 @@ h1 {
     margin: 0 auto 20px auto;
 }
 
+.square {
+    background-color: #A3D2CA;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
 .square img {
     width: 100px;
     height: 100px;
