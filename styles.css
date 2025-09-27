@@ -44,8 +44,8 @@ h1 {
 .square.selected {
     outline: 7px solid #A3D2CA;
     outline-offset: -4px; 
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 100px;
     border-radius: 15px;
 }
 
@@ -105,3 +105,21 @@ h1 {
   background-color: #ff9980;
   color: #ffffff;
 }
+
+.sprite-idle {
+  width: 64px;
+  height: 64px;
+  background-image: url('spritesheet.png');
+  background-repeat: no-repeat;
+  animation: idle 1s steps(4) infinite;
+  background-position: 0px 0px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+@keyframes idle {
+  100% {
+    background-position: 100px 0;
+  }
+}
+
