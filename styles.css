@@ -117,11 +117,38 @@ h1 {
     height: 64px;
     background-image: url(spritesheet_walk.png);
     background-repeat: no-repeat;
+    transform: scale(1.75);
+    margin-top: -745px;
+    margin-left: 550px;
     
-    animation: walkCycle 1s steps(10) infinite;
+    animation: walkCycle 1s steps(12) infinite;
 }
 
 @keyframes walkCycle {
+    from { background-position: 0px 0px; }
+    to { background-position: -960px 0px; }
+    
+}
+
+.catIdle {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.catIdle-IDLE {
+    width: 64px;
+    height: 64px;
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    transform: scale(1.75);
+    margin-top: -745px;
+    margin-left: 550px;
+    
+    animation: idleCycle 1s steps(8) infinite;
+}
+
+@keyframes idleCycle {
     from { background-position: 0px 0px; }
     to { background-position: -960px 0px; }
     
