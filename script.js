@@ -47,6 +47,7 @@ function shuffle(array) {
     return array;
 }
 
+//selects 4 random tags from the list of tags
 function randomTag(){
     const tags = ["angry", "bed", "belly", "black", "box", "brown", "calico", "computer", 
     "confused", "cute", "fat", "fluffy", "funny", "gray", "hat", "kitten", 
@@ -59,4 +60,11 @@ function randomTag(){
  
   const shuffled = [...TAGS].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, 4);
+}
+
+//checks if the four selected cards have the same gameTag
+function checkMatch(selectedCards) {
+    return selectedCards[0].gameTag === selectedCards[1].gameTag &&
+           selectedCards[1].gameTag === selectedCards[2].gameTag &&
+           selectedCards[2].gameTag === selectedCards[3].gameTag;
 }
