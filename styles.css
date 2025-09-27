@@ -86,7 +86,7 @@ h1 {
     width: 100px;
     height: 100px;
     background-image: url('spritesheet.png');
-    background-position: 0 0;
+    background-position: 20 20;
     animation: idleAnimation 1s steps(4) infinite;
     margin: 20px auto;
 }
