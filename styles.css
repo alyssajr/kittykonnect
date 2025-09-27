@@ -82,9 +82,8 @@ h1 {
   color: #ffffff;
 }
 
-.sprite{
-    .sprite {
-    background-image: url(IDLE.png);
+.sprite {
+    background-image: url(spritesheet.png);
     background-repeat: no-repeat;
     display: block;
 }
@@ -93,5 +92,4 @@ h1 {
     width: 640px;
     height: 64px;
     background-position: -5px -5px;
-}
 }
