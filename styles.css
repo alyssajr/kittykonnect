@@ -106,21 +106,15 @@ h1 {
   color: #ffffff;
 }
 
-.sprite {
-  width: 64px;          
-  height: 64px;         
-  background-image: url('spritesheet.png');
-  background-repeat: no-repeat;
-
-  animation: play 1s steps(5) infinite;
+.catWalk {
+    background-image: url(spritesheet_walk.png);
+    background-repeat: no-repeat;
+    display: block;
 }
 
-@keyframes play {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -320px 0; 
-  }
+.catWalk-WALK {
+    width: 960px;
+    height: 64px;
+    background-position: -5px -5px;
 }
 
