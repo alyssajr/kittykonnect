@@ -88,7 +88,9 @@ h1 {
   background-image: url('spritesheet.png');
   background-repeat: no-repeat;
   animation: idle 1s steps(4) infinite;
-  background-position: 100px 100px;
+  background-position: 0px 0px;
+  margin-left: 100px;
+  margin-top: 50px;
 }
 
 @keyframes idle {
