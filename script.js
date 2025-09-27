@@ -80,10 +80,12 @@ async function createGrid(){
 
         const img = document.createElement("img");
         img.src = catImages[i].url;
+        img.dataset.tag = catImages[i].gameTag;
 
         square.appendChild(img);
         gridContainer.appendChild(square);
 
+        // Submit button is disabled until 4 images are selected
         square.addEventListener("click", () => {
             if (square.classList.contains("selected")) {
                 square.classList.remove("selected");
@@ -91,14 +93,14 @@ async function createGrid(){
             } else if (selectedCount < maxSelection) {
                 square.classList.add("selected");
                 selectedCount++;
+            }else if(square.classList.contains("matched")){
+                return;
             }
 
             submitBtn.disabled = selectedCount !== maxSelection;
-        });
+        }); 
     }
 }
-
-createGrid();
 
 //checks if the four selected cards have the same gameTag
 function checkMatch(selectedCards) {
@@ -111,6 +113,33 @@ const message = document.getElementById("message");
 
 //  Handle submit
 submitBtn.addEventListener("click", () => {
-    message.textContent = "Submitted!";
+    const selectedSquares = Array.from(document.querySelectorAll(".square.selected"));
+
+    // Check if selected squares have the same tag
+    let isMatch = true;
+    const firstTag = selectedSquares[0].querySelector("img").dataset.tag;
+
+    for(let i = 1; i < selectedSquares.length; i++){
+        if(selectedSquares[i].querySelector("img").dataset.tag !== firstTag){
+            isMatch = false;
+            break;
+        }
+    }
+    if(isMatch){
+        for(let i = 0; i < selectedSquares.length; i++){
+            const square = selectedSquares[i];
+            square.innerHTML = `<div class="tag">${firstTag}</div>`;
+            square.classList.remove("selected");
+            selectedSquares[i].classList.add("match");
+        }
+        message.textContent = "Correct!";
+        selectedCount = 0;
+        submitBtn.disabled = true;
+    }else{
+        message.textContent = "Try again!";
+        
+    }
 });
+
+createGrid();
 
