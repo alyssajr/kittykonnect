@@ -46,3 +46,17 @@ function shuffle(array) {
         }
     return array;
 }
+
+function randomTag(){
+    const tags = ["angry", "bed", "belly", "black", "box", "brown", "calico", "computer", 
+    "confused", "cute", "fat", "fluffy", "funny", "gray", "hat", "kitten", 
+    "loaf", "orange", "sad", "sit", "sleep", "tabby", "tongue", "tuxedo", 
+    "white", "sofa", "food", "happy", "outside", "serious", "shocked", 
+    "christmas", "halloween", "yawn", "Bengal", "tortoiseshell", "blanket", 
+    "scared", "siamese", "smug", "standing", "stretch", "ugly", "GreenEyes", 
+    "basket", "bath", "cow", "crazy", "selfie", "stuck"
+    ];
+ 
+  const shuffled = [...TAGS].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, 4);
+}
