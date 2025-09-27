@@ -65,6 +65,7 @@ function randomTag(){
 const gridContainer = document.getElementById("grid");
 const maxSelection = 4;
 let selectedCount = 0;
+const submitBtn = document.getElementById("submitBtn");
 
 // Generate cat images grid
 async function createGrid(){
@@ -91,6 +92,8 @@ async function createGrid(){
                 square.classList.add("selected");
                 selectedCount++;
             }
+
+            submitBtn.disabled = selectedCount !== maxSelection;
         });
     }
 }
@@ -103,4 +106,11 @@ function checkMatch(selectedCards) {
            selectedCards[1].gameTag === selectedCards[2].gameTag &&
            selectedCards[2].gameTag === selectedCards[3].gameTag;
 }
+
+const message = document.getElementById("message");
+
+//  Handle submit
+submitBtn.addEventListener("click", () => {
+    message.textContent = "Submitted!";
+});
 

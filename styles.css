@@ -49,6 +49,12 @@ h1 {
     border-radius: 15px;
 }
 
+#message {
+    font-weight: bold;
+    color: #4A3F35;
+    text-align: center;
+}
+
 .button {
     padding: 10px;
     background-color: #FFB380;
@@ -57,6 +63,16 @@ h1 {
     border: none;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    color: #4A3F35;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button:disabled:hover {
+    background-color: #ffB380;
     color: #4A3F35;
 }
 
