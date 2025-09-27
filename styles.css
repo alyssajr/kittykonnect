@@ -130,27 +130,22 @@ h1 {
     
 }
 
-.catIdle {
-    background-image: url(spritesheet.png);
+.catJump {
+    background-image: url(spritesheet_jump.png);
     background-repeat: no-repeat;
     display: block;
 }
 
-.catIdle-IDLE {
+.catJump-JumpCat {
     width: 64px;
     height: 64px;
-    background-image: url(spritesheet.png);
+    background-image: url(spritesheet_jump.png);
     background-repeat: no-repeat;
     transform: scale(1.75);
-    margin-top: -745px;
-    margin-left: 550px;
-    
-    animation: idleCycle 1s steps(8) infinite;
+    animation: jumpCycle 1s steps(13) infinite;
 }
 
-@keyframes idleCycle {
+@keyframes jumpCycle {
     from { background-position: 0px 0px; }
     to { background-position: -960px 0px; }
-    
 }
-
