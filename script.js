@@ -57,6 +57,41 @@ function randomTag(){
     "basket", "bath", "cow", "crazy", "selfie", "stuck"
     ];
  
-  const shuffled = [...TAGS].sort(() => Math.random() - 0.5);
+  const shuffled = [...tags].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, 4);
 }
+
+const gridContainer = document.getElementById("grid");
+const maxSelection = 4;
+let selectedCount = 0;
+
+// Generate cat images grid
+async function createGrid(){
+    gridContainer.innerHTML = "";
+
+    const tags = randomTag();
+    const catImages = await generateGame(tags);
+
+    for(let i = 0; i < catImages.length; i++){
+        const square = document.createElement("div");
+        square.classList.add("square");
+
+        const img = document.createElement("img");
+        img.src = catImages[i].url;
+
+        square.appendChild(img);
+        gridContainer.appendChild(square);
+
+        square.addEventListener("click", () => {
+            if (square.classList.contains("selected")) {
+                square.classList.remove("selected");
+                selectedCount--;
+            } else if (selectedCount < maxSelection) {
+                square.classList.add("selected");
+                selectedCount++;
+            }
+        });
+    }
+}
+
+createGrid();
