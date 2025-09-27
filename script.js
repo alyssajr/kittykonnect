@@ -133,12 +133,16 @@ submitBtn.addEventListener("click", () => {
             selectedSquares[i].classList.add("match");
         }
         message.textContent = "Correct!";
-        selectedCount = 0;
-        submitBtn.disabled = true;
     }else{
+        for(let i = 0; i < selectedSquares.length; i++){
+            selectedSquares[i].classList.remove("selected");
+        }
         message.textContent = "Try again!";
-        
+
     }
+
+    selectedCount = 0;
+    submitBtn.disabled = true;
 });
 
 createGrid();
