@@ -85,14 +85,14 @@ h1 {
 .sprite-idle {
   width: 32px;
   height: 32px;
-  background-image: url('IDLE.png'); /* your sprite sheet */
+  background-image: url('spritesheet.png');
   background-repeat: no-repeat;
   animation: idle 1s steps(4) infinite;
 }
 
 @keyframes idle {
   100% {
-    background-position: -128px 0; /* move across all 4 frames */
+    background-position: -128px 0;
   }
 }
 
