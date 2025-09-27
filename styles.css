@@ -111,15 +111,14 @@ h1 {
   height: 64px;
   background-image: url('spritesheet.png');
   background-repeat: no-repeat;
-  animation: idle 1s steps(4) infinite;
-  background-position: 0px 0px;
+  animation: walk 1s steps(4) infinite;
+  background-position: 0px -64px;
   margin-left: 100px;
   margin-top: 50px;
 }
-
 @keyframes idle {
   100% {
-    background-position: 100px 0;
+    background-position: 100px -64px;
   }
 }
 
