@@ -82,16 +82,17 @@ h1 {
   color: #ffffff;
 }
 
-.sprite-idle{
-    width: 100px;
-    height: 100px;
-    background-image: url('spritesheet.png');
-    background-position: 20 20;
-    animation: idleAnimation 1s steps(4) infinite;
-    margin: 20px auto;
+.sprite-idle {
+  width: 32px;
+  height: 32px;
+  background-image: url('spritesheet.png'); /* your sprite sheet */
+  background-repeat: no-repeat;
+  animation: idle 1s steps(4) infinite;
 }
-@keyframes idleAnimation {
-    100%{
-        background-position: -128px 0;
-    }
+
+@keyframes idle {
+  100% {
+    background-position: -128px 0; /* move across all 4 frames */
+  }
 }
+
