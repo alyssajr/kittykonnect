@@ -82,19 +82,21 @@ h1 {
   color: #ffffff;
 }
 
-.sprite-idle {
-  width: 64px;
-  height: 64px;
+.sprite {
+  width: 64px;          
+  height: 64px;         
   background-image: url('spritesheet.png');
   background-repeat: no-repeat;
-  animation: walk 1s steps(4) infinite;
-  background-position: 0px -64px;
-  margin-left: 100px;
-  margin-top: 50px;
+
+  animation: play 1s steps(5) infinite;
 }
-@keyframes idle {
-  100% {
-    background-position: 100px -64px;
+
+@keyframes play {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -320px 0; 
   }
 }
 
