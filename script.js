@@ -50,7 +50,7 @@ function shuffle(array) {
 //selects 4 random tags from the list of tags
 function randomTag(){
     const tags = ["angry", "bed", "belly", "black", "box", "brown", "calico", "computer", 
-    "confused", "cute", "fat", "fluffy", "funny", "gray", "hat", "kitten", 
+    "confused", "fat", "fluffy", "gray", "hat", "kitten", 
     "loaf", "orange", "sad", "sit", "sleep", "tabby", "tongue", "tuxedo", 
     "white", "sofa", "food", "happy", "outside", "serious", "shocked", 
     "christmas", "halloween", "yawn", "Bengal", "tortoiseshell", "blanket", 
@@ -152,6 +152,7 @@ submitBtn.addEventListener("click", () => {
             break;
         }
     }
+
     if(isMatch){
         for(let i = 0; i < selectedSquares.length; i++){
             const square = selectedSquares[i];
@@ -165,12 +166,11 @@ submitBtn.addEventListener("click", () => {
             square.classList.remove("selected");
         }
         message.textContent = "Correct!";
-    }else{
+    }else{ // Remove selected squares list
         for(let i = 0; i < selectedSquares.length; i++){
             selectedSquares[i].classList.remove("selected");
         }
         message.textContent = "Try again!";
-
     }
 
     selectedCount = 0;
@@ -203,3 +203,11 @@ document.addEventListener('DOMContentLoaded', () => {
     moveCat();
 });
 
+newGameBtn.addEventListener("click", () => {
+    message.textContent = "";
+    
+    selectedCount = 0;
+    submitBtn.disabled = true;
+
+    createGrid();
+});

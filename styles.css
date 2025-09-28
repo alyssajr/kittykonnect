@@ -60,7 +60,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(163, 210, 202, 0.6); /* semi-transparent */
+    background-color: rgba(163, 210, 202, 0.6);
     color: #ffffff;
     word-wrap: break-word;
     font-weight: bold;
@@ -106,6 +106,27 @@ h1 {
 .button:hover {
   background-color: #ff9980;
   color: #ffffff;
+  font-weight: bold;
+}
+
+#newGameBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #A3D2CA;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #4A3F35;
+}
+
+#newGameBtn:hover {
+  background-color: #77adad;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .catWalk {
