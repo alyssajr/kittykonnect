@@ -130,6 +130,7 @@ h1 {
     
 }
 
+/*
 .catJump {
     background-image: url(spritesheet_jump.png);
     background-repeat: no-repeat;
@@ -151,3 +152,4 @@ h1 {
     from { background-position: 0px 0px; }
     to { background-position: -960px 0px; }
 }
+    */
