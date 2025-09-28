@@ -130,7 +130,7 @@ h1 {
 }
 
 .catWalk {
-    background-image: url(spritesheet_walk.png);
+    background-image: url("images/spritesheet_walk.png");
     background-repeat: no-repeat;
     display: block;
 }
@@ -140,7 +140,7 @@ h1 {
     z-index: 1;
     width: 64px;
     height: 64px;
-    background-image: url(spritesheet_walk.png);
+    background-image: url("images/spritesheet_walk.png");
     background-repeat: no-repeat;
     transform: scaleX(-1) scale(1.75);
     margin-top: -40px;
@@ -155,7 +155,7 @@ h1 {
 }
 
 .catSleep {
-    background-image: url(spritesheet_Sleep.png);
+    background-image: url("images/spritesheet_Sleep.png");
     background-repeat: no-repeat;
     display: block;
 }
@@ -163,7 +163,7 @@ h1 {
 .catSleep-SLEEP {
     width: 58px;
     height: 60px;
-    background-image: url(spritesheet_Sleep.png);
+    background-image: url("images/spritesheet_Sleep.png");
     background-repeat: no-repeat;
     transform: scale(1.75);
     margin-top: -20px;
