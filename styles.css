@@ -118,8 +118,8 @@ h1 {
     background-image: url(spritesheet_walk.png);
     background-repeat: no-repeat;
     transform: scale(1.75);
-    margin-top: -745px;
-    margin-left: 550px;
+    margin-top: -500px;
+    margin-left: 30px;
     
     animation: walkCycle 1s steps(12) infinite;
 }
