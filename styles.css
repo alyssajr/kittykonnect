@@ -161,3 +161,8 @@ h1 {
     margin-bottom: -20px;
 }
 
+.flip{
+    transform: scaleX(-1) scale(1.75);
+    transform-origin: center;
+}
+

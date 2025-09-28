@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (position < window.innerWidth) {
             requestAnimationFrame(moveCat);
         } else {
-            position = -60; // Reset to start from left
+            position = -64; // Reset to start from left
             requestAnimationFrame(moveCat);
         }
     }
