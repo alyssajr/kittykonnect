@@ -137,7 +137,7 @@ h1 {
     margin-bottom: -20px;
 }
 
-/*
+
 .catJump {
     background-image: url(spritesheet_jump.png);
     background-repeat: no-repeat;
@@ -145,18 +145,17 @@ h1 {
 }
 
 .catJump-JumpCat {
-    width: 64px;
-    height: 64px;
+    width: 70px;
+    height: 70px;
     background-image: url(spritesheet_jump.png);
     background-repeat: no-repeat;
-    transform: scale(1.75);
-    margin-top: -745px;
-    margin-left: 550px;
-    animation: jumpCycle 1s steps(13) infinite;
+    transform: scale(2);
+    margin-top: -50px;
+    margin-left: 30px;
+    animation: jumpCycle 1s steps(10) infinite;
 }
 
 @keyframes jumpCycle {
     from { background-position: 0px 0px; }
-    to { background-position: -960px 0px; }
+    to { background-position: -190px 0px; }
 }
-    */
