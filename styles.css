@@ -80,6 +80,8 @@ h1 {
 }
 
 .button {
+    position: relative;
+    z-index: 10;
     margin-top: 20px;
     padding: 10px;
     background-color: #FFB380;
@@ -113,6 +115,8 @@ h1 {
 }
 
 .catWalk-WALK {
+    position: relative;
+    z-index: 1;
     width: 64px;
     height: 64px;
     background-image: url(spritesheet_walk.png);
@@ -159,10 +163,5 @@ h1 {
     align-items: center;
     gap: 10px;
     margin-bottom: -20px;
-}
-
-.flip{
-    transform: scaleX(-1) scale(1.75);
-    transform-origin: center;
 }
 

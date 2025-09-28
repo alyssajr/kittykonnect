@@ -189,10 +189,10 @@ document.addEventListener('DOMContentLoaded', () => {
         position += speed;
 
         // Apply transform: move AND keep the scale
-        cat.style.transform = `translateX(${position}px) scale(2)`;
+        cat.style.transform = `translateX(${position}px) scaleX(-1) scale(1.75)`;
 
         // If off-screen, reset to left
-        if (position < window.innerWidth) {
+        if (position < window.innerWidth - 64*1.5) {
             requestAnimationFrame(moveCat);
         } else {
             position = -64; // Reset to start from left
