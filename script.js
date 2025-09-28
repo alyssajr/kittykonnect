@@ -179,3 +179,27 @@ submitBtn.addEventListener("click", () => {
 
 createGrid();
 
+document.addEventListener('DOMContentLoaded', () => {
+    const cat = document.querySelector('.catWalk-WALK');
+
+    let position = 0;
+    const speed = 3; // pixels per frame
+
+    function moveCat() {
+        position += speed;
+
+        // Apply transform: move AND keep the scale
+        cat.style.transform = `translateX(${position}px) scale(2)`;
+
+        // If off-screen, reset to left
+        if (position < window.innerWidth) {
+            requestAnimationFrame(moveCat);
+        } else {
+            position = -60; // Reset to start from left
+            requestAnimationFrame(moveCat);
+        }
+    }
+
+    moveCat();
+});
+
